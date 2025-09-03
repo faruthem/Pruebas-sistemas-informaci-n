@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            //math.random() Genera numeros aleatorios.
+            //onmousseenter
+           function procesador_mouse_move(){
+            document.getElementById("x").value = event.clientX;
+            document.getElementById("y").value = event.clientY;
+            document.getElementById("but").style.top = event.clientY+"px"; 
+            document.getElementById("but").style.left = event.clientX+"px"; 
+            console.log(event);
+           }    
+
+        
+        </script>
+    </head>
+    <!--body onmouseup="procesador_mouse_move()"-->
+    <body onmousemove="procesador_mouse_move()">
+        x: <input type="text" id="x">
+        <br/>
+        y: <input type="text" id="y">
+        <button id="but" style="position :absolute;">MUEVAME!</button>
+    </body>
+</html>
+
